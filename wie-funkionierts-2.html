@@ -1,0 +1,72 @@
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+    <title>UBERWACH! Wie funktioniert's? Teil II</title>
+    <link href="res/screen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="kameras"><a href="/" title="Zzzzzzz!"><img alt="Zzzzzzz!" src="res/kameras.gif"/></a></div>
+<h1 id="header"><a href="/"><img alt="Aktion Überwach!" src="res/uberwach.gif"/></a></h1>
+<div id="menu">
+    <a class="" href="/"><img alt="Über" src="res/menu-uber.gif"></a><a class="active" href="wie-funkionierts.html"><img alt="Funktionsweise" src="res/menu-funktionsweise.gif"></a><a class="" href="charts.html"><img alt="Protokoll &amp; Charts" src="res/menu-protokoll.gif"></a>
+</div>
+<div id="content">
+    <h2>Schritt 2:</h2>
+    <h2>Welche Daten werden überhaupt zu uberwach.de gesendet, wie funktioniert das und was wird mit diesen Daten dann gemacht? </h2>
+
+    <p><img alt="Infograph - Übertragung der Daten an uberwach.de" src="res/wie-funkionierts-2.gif"/></p>
+
+    <h3>Erläuterung</h3>
+    <p>Die im <a href="wie-funkionierts-1.html">ersten Schritt</a> angefragte Webseite enthält ein Bildelement, das nicht vom Webserver des teilnehmenden
+        Webauftritts, sondern automatisch durch deinen Webbrowser direkt vom Uberwach.de-Webserver angefragt, geladen und dann dargestellt wird.</p>
+
+    <p>Durch diese Anfrage werden Daten an den uberwach.de-Webserver übertragen. </p>
+
+    <p>Ein derartiges Bildelement wird auch als Web-Bug bezeichnet und ist als Prinzip der Webbrowser-seitigen Datensammlung schon seit etwa 1996 bekannt.</p>
+
+    <p>Dies geschieht jedoch nur dann, wenn die IP-Adresse deines Internetzugangs der Liste von verdächtigen IP-Adressen zugeordnet werden kann. Wird keine
+        Übereinstimmung gefunden, wird kein Bild vom uberwach.de-Webserver angefragt und es werden auch keine Daten dorthin übertragen.</p>
+
+    <p>Die Überprüfung deiner IP-Adresse findet übrigens auf deinem Computer im Webbrowser statt und wird von dem >Code-Snippet durchgeführt, das teilnehmende
+        Webauftritte und Blogs in ihre Webseiten eingebunden haben. </p>
+
+    <p>Für diese Webbrowser basierte Überprüfung muss Javascript in deinem Webbrowser aktiviert sein. <a href="wie-funkionierts-2-v1.html">Ist das nicht der
+        Fall, dann funktioniert es wie hier beschrieben</a>. </p>
+    <h3>Welche Daten werden dabei übertragen?</h3>
+    <p>Die Anfrage des Bildelements enthält in der Regel neben weiteren diese Daten:</p>
+    <ul class="small">
+        <li>Die IP-Adresse deines Internetzugangs</li>
+        <li>Die URL des angefragten Bildelements</li>
+        <li>Die URL der verweisenden Webseite, in der das Bildelement integriert ist</li>
+        <li>Die Kennung deines Webbrowser, die in der Regel den Softwarenamen inkl. Versionsnummer, sowie Details zum verwendeten Betriebssystem umfasst
+        </li>
+    </ul>
+
+    <h3>Was passiert mit den Daten auf dem uberwach.de-Webserver?</h3>
+    <p>Deine IP-Adresse, die Bestandteil der Daten ist, wird mit der Liste der verdächtigen IP-Adressen abgeglichen, um die übertragenen Daten zu verifizieren.
+        Das einzige Merkmal nachdem gefiltert wird ist die Zugehörigkeit zu einem der aufgelisteten IP-Adressen-Bereiche. </p>
+
+    <p>Gibt es einen Treffer in der Liste, werden Datum und Uhrzeit, verweisende Seite und die Details des Treffers (IP-Adressen-Bereich, Bezeichnung und URL)
+        in einer Datenbank gespeichert und ein orange eingefärbtes Bild der Kamera an deinen Webbrowser ausgeliefert, das in diesem Hinweis dann dargestellt
+        wird: </p>
+
+    <p><img alt="Verdachtsmoment!" src="res/hinweis-rot.gif"/></p>
+    <p>= Verdachtsmoment! Zugriff protokolliert. </p>
+
+    <p>Wichtig: wurde bei der Überprüfung in deinem Webbrowser keine Übereinstimmung mit der Liste gefunden, so werden keine Daten an den uberwach.de-Webserver
+        übertragen sondern stattdessen wird das grün eingefärbte Bild der Kamera vom Webserver der teilnehmenden Webseite ausgeliefert und dann in folgendem
+        Hinweis dargestellt:</p>
+
+    <p><img alt="Kein Verdachtsmoment!" src="res/hinweis-gruen.gif"/></p>
+    <p>= Kein Verdachtsmoment. </p>
+
+    <p>Die auf uberwach.de gespeicherten Daten werden dann in <a href="charts.html">verschiedenen Ansichten</a> aufbereitet dargestellt.</p>
+</div>
+<div id="uberwach">
+    <h1><img alt="Unterstütz!" src="res/support.gif"/></h1>
+    <p><a href="https://www.eff.org/issues/privacy" target="_blank"><img alt="Privacy at EFF" src="res/support-eff.png"/></a>
+        <a href="http://www.vorratsdatenspeicherung.de" target="_blank"><img alt="Stopp die Vorratsdatenspeicherung!" src="res/support-akvds.gif"/></a>
+        <a href="https://dataloo.de/kategorie/aktion-uberwach" target="_blank"><img alt="" src="res/support-stasi20.gif"/></a></p>
+</div>
+</body>
+</html>
